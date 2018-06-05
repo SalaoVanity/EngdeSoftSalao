@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioCliente" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7064f015-183c-482e-a473-ae5311d26627">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT agenda_cod, agenda_codcliente, agenda_codservico, agenda_servico,
+       agenda_data, agenda_hora, agenda_codfuncionario, agenda_valorinicial,
+       agenda_desconto, agenda_valorfinal, agenda_obs, agenda_status,
+       agenda_tempoestimado, agenda_nomefuncionario, agenda_nomecliente
+  FROM agenda
+ ORDER BY agenda_cod;]]>
+	</queryString>
+	<field name="agenda_cod" class="java.lang.Integer"/>
+	<field name="agenda_codcliente" class="java.lang.Integer"/>
+	<field name="agenda_codservico" class="java.lang.Integer"/>
+	<field name="agenda_servico" class="java.lang.String"/>
+	<field name="agenda_data" class="java.sql.Date"/>
+	<field name="agenda_hora" class="java.lang.String"/>
+	<field name="agenda_codfuncionario" class="java.lang.Integer"/>
+	<field name="agenda_valorinicial" class="java.lang.String"/>
+	<field name="agenda_desconto" class="java.lang.String"/>
+	<field name="agenda_valorfinal" class="java.lang.String"/>
+	<field name="agenda_obs" class="java.lang.String"/>
+	<field name="agenda_status" class="java.lang.String"/>
+	<field name="agenda_tempoestimado" class="java.lang.String"/>
+	<field name="agenda_nomefuncionario" class="java.lang.String"/>
+	<field name="agenda_nomecliente" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="366" height="51" uuid="e1800d7e-ddc4-4df1-bfe9-db76fd77e8ab"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Agenda]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="393" y="59" width="162" height="20" uuid="6ef60d86-24d1-4a0b-ae6d-4799ff8176c4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="49" height="20" uuid="0b730195-4a0d-4b39-afea-8eb3b0b48206"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="41" width="100" height="20" uuid="7149b09f-08fd-4a34-a411-cdd72d5a2c50"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="41" width="150" height="20" uuid="bac584d1-4ccc-4470-89b7-ed6c6e00b941"/>
+				<text><![CDATA[SERVIÇO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="41" width="100" height="20" uuid="e514f315-0f8b-4148-939d-987f49809966"/>
+				<text><![CDATA[ID CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="41" width="100" height="20" uuid="918646d8-2a1f-44bd-98fa-123839abe972"/>
+				<text><![CDATA[ID FUNCIONÁRIO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="49" height="20" uuid="4e30be4f-4edb-4996-b873-4b5eb8fd713b"/>
+				<textFieldExpression><![CDATA[$F{agenda_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="150" height="20" uuid="75c10256-5847-48b2-b800-edd955dca529"/>
+				<textFieldExpression><![CDATA[$F{agenda_servico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="2" width="100" height="20" uuid="f8a2aaed-09a2-4920-8d91-f4b5baf4473e"/>
+				<textFieldExpression><![CDATA[$F{agenda_codcliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="2" width="100" height="20" uuid="89284765-9a95-428f-b98b-6c9c531dec11"/>
+				<textFieldExpression><![CDATA[$F{agenda_codfuncionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="100" height="20" uuid="e36678e4-c5eb-469a-9eb0-0f4a26ef5c4d"/>
+				<textFieldExpression><![CDATA[$F{agenda_data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="140" splitType="Stretch">
+			<textField>
+				<reportElement x="530" y="120" width="25" height="20" uuid="0ad0fec2-a664-4270-b8d1-11b3f227891f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="141" height="140" uuid="4b6c06bc-f28f-4a27-830c-8bee263f4478"/>
+				<imageExpression><![CDATA["C:\\Users\\Leandro\\Pictures\\salao.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
