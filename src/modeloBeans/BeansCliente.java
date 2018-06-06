@@ -34,44 +34,32 @@ public class BeansCliente {
         return cod_cliente;
     }
 
-    /**
-     * @param cod_cliente the cod_cliente to set
-     */
+    
     public void setCod_cliente(int cod_cliente) {
         this.cod_cliente = cod_cliente;
     }
 
-    /**
-     * @return the nome_apelido
-     */
+    
     public String getNome_apelido() {
         return nome_apelido;
     }
 
-    /**
-     * @param nome_apelido the nome_apelido to set
-     */
+    
     public void setNome_apelido(String nome_apelido) {
         this.nome_apelido = nome_apelido;
     }
 
-    /**
-     * @return the aniversario
-     */
+    
     public String getAniversario() {
         return aniversario;
     }
 
-    /**
-     * @param aniversario the aniversario to set
-     */
+    
     public void setAniversario(String aniversario) {
         this.aniversario = aniversario;
     }
 
-    /**
-     * @return the nome_completo
-     */
+    
     public String getNome_completo() {
         return nome_completo;
     }
@@ -83,65 +71,47 @@ public class BeansCliente {
         this.nome_completo = nome_completo;
     }
 
-    /**
-     * @return the telefone
-     */
+    
     public int getTelefone() {
         return telefone;
     }
 
-    /**
-     * @param telefone the telefone to set
-     */
+    
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-    /**
-     * @return the email
-     */
+    
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email the email to set
-     */
+    
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * @return the rua
-     */
+  
     public String getRua() {
         return rua;
     }
 
-    /**
-     * @param rua the rua to set
-     */
+    
     public void setRua(String rua) {
         this.rua = rua;
     }
 
-    /**
-     * @return the cep
-     */
+    
     public int getCep() {
         return cep;
     }
 
-    /**
-     * @param cep the cep to set
-     */
+    
     public void setCep(int cep) {
         this.cep = cep;
     }
 
-    /**
-     * @return the numero
-     */
+    
     public int getNumero() {
         return numero;
     }
