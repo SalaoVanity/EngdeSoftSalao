@@ -9,7 +9,7 @@ import modeloDao.DaoSalao;
 
 /**
  *
- * @author Rayssa
+ * 
  */
 public class FormSalao extends javax.swing.JFrame {
     
@@ -191,7 +191,6 @@ public class FormSalao extends javax.swing.JFrame {
                 {}
             },
             new String [] {
-
             }
         ));
         jScrollPane1.setViewportView(jTableCliente);
