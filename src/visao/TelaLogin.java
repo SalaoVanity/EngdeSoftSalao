@@ -14,7 +14,7 @@ import modeloConexao.ConexaoBD;
 
 /**
  *
- * @author Rayssa
+ * 
  */
 public class TelaLogin extends javax.swing.JFrame {
     
